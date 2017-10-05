@@ -1,8 +1,10 @@
 <!-- view-title的值会被加载到导航的中间 这就是ion-vew的作用 -->
 <ion-view view-title='首页'>
     <ion-nav-bar class='bar-royal'>
-        <ion-nav-buttons side="left">
-            <button class="button button-clear icon ion-navicon" ng-click="doSomething()"></button>
+        <!-- 头部导航添加按钮 -->
+        <ion-nav-buttons>
+            <!-- menu-toggle是侧滑菜单显示/隐藏的开关 -->
+            <button class='button button-clear ion-navicon' menu-toggle></button>
         </ion-nav-buttons>
     </ion-nav-bar>
 

@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "e9aa6e34ec87acba7bef"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "f607100e138659bc11ba"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -876,6 +876,11 @@ var firstCtrl = __webpack_require__(10);
 var tab01Ctrl = __webpack_require__(11);
 
 angular.module('controllers', [])
+    .controller('sidemenu', function($scope) {
+        $scope.toggleLeft = function() {
+            $ionicSideMenuDelegate.toggleLeft();
+        };
+    })
     .controller('home', tabsControllers.home)
     .controller('forum', tabsControllers.forum)
     .controller('center', tabsControllers.center)
