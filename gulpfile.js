@@ -25,3 +25,11 @@ gulp.task('sass', function(done) {
 gulp.task('watch', ['sass'], function() {
   gulp.watch(paths.sass, ['sass']);
 });
+
+// gulp.task('img', function () { //将img下的源文件复制到build目录下
+//     return gulp.src('./www/img/*').pipe(gulp.dest('./img'));
+// });
+
+// gulp.task('start', function () {
+//     gulp.watch('./www/img/*', ['img']);
+// });

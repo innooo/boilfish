@@ -107,7 +107,7 @@ module.exports = {
         }),
         new HtmlWebpackPlugin({
             filename: 'index.html',
-            template: process.cwd() + '/index.html',
+            template: process.cwd() + '/www/temp.html',
             inject: 'head',
             // favicon: process.cwd() + '/src/pages/index.html', //有疑惑
             chunks: ['index']
