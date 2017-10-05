@@ -60,7 +60,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "54fd4b737f081f36f1ac"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "e9aa6e34ec87acba7bef"; // eslint-disable-line no-unused-vars
 /******/ 	var hotRequestTimeout = 10000;
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotCurrentChildModule; // eslint-disable-line no-unused-vars
@@ -737,8 +737,8 @@
 //引入样式
 __webpack_require__(1);
 
-__webpack_require__(4);
-__webpack_require__(7);
+__webpack_require__(5);
+__webpack_require__(8);
 angular.module('starter', ['ionic', 'route', 'controllers'])
 
 .run(function($ionicPlatform) {
@@ -765,6 +765,7 @@ angular.module('starter', ['ionic', 'route', 'controllers'])
 
 __webpack_require__(2);
 __webpack_require__(3);
+__webpack_require__(4);
 
 /***/ }),
 /* 2 */
@@ -780,17 +781,23 @@ __webpack_require__(3);
 
 /***/ }),
 /* 4 */
+/***/ (function(module, exports) {
+
+// removed by extract-text-webpack-plugin
+
+/***/ }),
+/* 5 */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(5);
 __webpack_require__(6);
+__webpack_require__(7);
 
 
 
 angular.module('route', ['tabsRouter', 'firstRouter']);
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 angular.module('tabsRouter', [])
@@ -843,7 +850,7 @@ angular.module('tabsRouter', [])
     }])
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 angular.module('firstRouter', [])
@@ -861,12 +868,12 @@ angular.module('firstRouter', [])
     })
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
-var tabsControllers = __webpack_require__(8);
-var firstCtrl = __webpack_require__(9);
-
+var tabsControllers = __webpack_require__(9);
+var firstCtrl = __webpack_require__(10);
+var tab01Ctrl = __webpack_require__(11);
 
 angular.module('controllers', [])
     .controller('home', tabsControllers.home)
@@ -875,9 +882,10 @@ angular.module('controllers', [])
     .controller('mall', tabsControllers.mall)
     .controller('self', tabsControllers.self)
     .controller('first', firstCtrl)
+    .controller('tab01', tab01Ctrl)
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports) {
 
 var tabsControllers = {
@@ -891,7 +899,7 @@ var tabsControllers = {
 
 
         $scope.str = 'center';
-        $scope.tabNames = ['java', 'html5', 'android'];
+        $scope.tabNames = ['关注', '精品', '圈子'];
         $scope.slectIndex = 0;
         $scope.activeSlide = function(index) { //点击时候触发
             $scope.slectIndex = index;
@@ -913,7 +921,7 @@ var tabsControllers = {
 module.exports = tabsControllers;
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 // angular.module('aboutCtrl', [])
@@ -934,6 +942,18 @@ module.exports = function($scope, $http) {
     }).success(function(data) {
         console.log(eval(data));
     });
+
+}
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = function($scope, $http) {
+
+    var oImg = document.getElementsByClassName('tab01_img');
+    console.log(oImg);
+    console.log('tab01');
 
 }
 

@@ -1,3 +1,20 @@
+/* 帖子页面样式 */
+
+.center_head {
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.slide-item {
+    margin-top: 65px;
+}
+
+
+/* .center-slide {} */
+
 .tab_default {
     background: #f67063;
     color: #fff;
@@ -14,27 +31,31 @@
     border-bottom: solid 2px #0e9fdd;
 }
 
+.center-slide {
+    background: #eaeaea;
+}
+
 
 /* .arrow-top {
-    position: absolute;
-    width: 0;
-    height: 0;
-    top: 20px;
-    border: 6px solid #3E89F5;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-top-color: transparent;
+  position: absolute;
+  width: 0;
+  height: 0;
+  top: 20px;
+  border: 6px solid #3E89F5;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
 }
 
 .arrow-top:after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 0;
-    border: 12px solid #fff;
-    right: -12px;
-    bottom: -13px;
-    border-right-color: transparent;
-    border-left-color: transparent;
-    border-top-color: transparent;
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 0;
+  border: 12px solid #fff;
+  right: -12px;
+  bottom: -13px;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-top-color: transparent;
 } */
