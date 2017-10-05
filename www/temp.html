@@ -38,11 +38,25 @@
 
 
 <body ng-app="starter">
-    <!-- 视图容器,无name属性为默认容器 -->
-    <ion-nav-view>
 
-    </ion-nav-view>
+    <ion-side-menus>
+        <ion-side-menu-content>
+            <!-- 视图容器,无name属性为默认容器 -->
+            <ion-nav-view>
 
+            </ion-nav-view>
+        </ion-side-menu-content>
+
+
+        <ion-side-menu ng-controller='ctrl'>
+            <ion-header-bar class='bar-royal'>
+                <h1 class='title'>顶部</h1>
+            </ion-header-bar>
+            <ion-list>
+                <ion-item ng-repeat='i in [11,22,33]'>{{i}}</ion-item>
+            </ion-list>
+        </ion-side-menu>
+    </ion-side-menus>
 
 </body>
 
